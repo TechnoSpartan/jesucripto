@@ -1,0 +1,13 @@
+{
+  "name": "jesucripto",
+  "version": "0.1.0",
+  "description": "Paquete de frases de Jesucristo, escrito en HollyScript",
+  "main": "index.js",
+  "keywords": ["jesucripto", "jesucristo", "frases", "HollyScript", "jesus"],
+  "author": {
+    "name": "jesucripto",
+    "email": "jesucripto@codespartan.es"
+  },
+  "license": "ISC",
+  "files": ["index.js"]
+}
