@@ -1,0 +1,22 @@
+services:
+  jesucriptoDB:
+    image: mongo
+    container_name: jesucriptodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: jesucristo
+      MONGO_INITDB_ROOT_PASSWORD: salvacion666
+      MONGO_INITDB_DATABASE: jesucriptoDB
+    ports:
+      - "27017:27017"
+    volumes:
+      - jesucriptoDB_data:/data/db
+    networks:
+      - backend
+
+volumes:
+  jesucriptoDB_data:
+
+networks:
+  backend:
+    driver: bridge
