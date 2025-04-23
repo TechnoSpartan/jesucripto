@@ -2,12 +2,52 @@
   "name": "jesucripto",
   "version": "0.1.0",
   "description": "Paquete de frases de Jesucristo, escrito en HollyScript",
-  "main": "index.js",
-  "keywords": ["jesucripto", "jesucristo", "frases", "HollyScript", "jesus"],
-  "author": {
-    "name": "jesucripto",
-    "email": "jesucripto@codespartan.es"
+  "keywords": [
+    "jesucripto",
+    "jesucristo",
+    "frases",
+    "HollyScript",
+    "jesus"
+  ],
+  "homepage": "https://github.com/TechnoSpartan/jesucripto#readme",
+  "bugs": {
+    "url": "https://github.com/TechnoSpartan/jesucripto/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechnoSpartan/jesucripto.git"
   },
   "license": "ISC",
-  "files": ["index.js"]
+  "author": "jesucripto <jesucripto@codespartan.es>",
+  "type": "module",
+  "main": "server.ts",
+  "scripts": {
+    "build": "npx tsup",
+    "test": "vitest --config vitest.config.ts",
+    "dev": "npx tsx src/server.ts",
+    "populate": "node index.js",
+    "start": "node dist/server.js",
+    "test:ui": "vitest --ui"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "dotenv": "16.5.0",
+    "express": "5.1.0",
+    "mongoose": "8.13.2"
+  },
+  "devDependencies": {
+    "@types/cors": "2.8.17",
+    "@types/express": "5.0.1",
+    "@types/node": "^22.14.1",
+    "@types/supertest": "6.0.3",
+    "@vitest/ui": "^3.1.2",
+    "supertest": "^7.1.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "5.8.3",
+    "vitest": "^3.1.2"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
 }
