@@ -1,6 +1,6 @@
 import request from 'supertest';
 import express from 'express';
-import versiculoRoutes from '../routes/versiculos.js';
+import versiculoRoutes from '../routes/versiculos';
 
 const app = express();
 app.use(express.json());

@@ -1,8 +1,8 @@
 import 'dotenv/config';
 import mongoose from 'mongoose';
-import evangelioCanonico from './src/evangelio.canonico.js';
-import evangelioApocrifo from './src/evangelio.apocrifo.js';
-import {formatearVersiculo} from './src/formatear.versiculo.ts';
+import evangelioCanonico from './evangelio.canonico.js';
+import evangelioApocrifo from './evangelio.apocrifo.js';
+import {formatearVersiculo} from './formatear.versiculo.js';
 
 
 const {

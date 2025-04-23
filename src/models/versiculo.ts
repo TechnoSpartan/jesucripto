@@ -1,4 +1,7 @@
-import mongoose, { Schema, Document, model, models } from "mongoose";
+import mongoose, { Schema, Document, model } from "mongoose";
+
+const { models } = mongoose;
+
 
 export interface IVersiculo extends Document {
     texto: string;
