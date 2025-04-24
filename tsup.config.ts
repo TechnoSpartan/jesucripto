@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 export default defineConfig({
     entry: ['src/server.ts'],
-    env: dotenv.config().parsed,
+    env: dotenv.config().parsed ?? {},
     outDir: 'dist',
     format: ['esm'],
     splitting: false,
