@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
-import evangelioCanonico from './evangelio.canonico.js';
-import evangelioApocrifo from './evangelio.apocrifo.js';
-import {formatearVersiculo} from './formatear.versiculo.js';
-import { mongoConfig } from './mongo.config.js';
+import evangelioCanonico from './evangelio.canonico';
+import evangelioApocrifo from './evangelio.apocrifo';
+import {formatearVersiculo} from './formatear.versiculo';
+import { mongoConfig } from './mongo.config';
+import 'dotenv/config';
 
 const todosLosVersiculos = [...evangelioCanonico, ...evangelioApocrifo];
 
@@ -15,9 +16,9 @@ const versiculoSchema = new mongoose.Schema({
 
 const Versiculo = mongoose.model("Versiculo", versiculoSchema);
 
-const {options, uri} = mongoConfig();
+const { uri} = mongoConfig();
 
-mongoose.connect(uri, options)
+mongoose.connect(uri)
     .then(async () => {
         console.log("📡 Conectado a la base de datos de San Pedro");
         const versiculosFormateados = todosLosVersiculos.map(literal => formatearVersiculo(literal));
