@@ -1,23 +1,9 @@
-import 'dotenv/config';
 import mongoose from 'mongoose';
-import evangelioCanonico from './evangelio.canonico.js';
-import evangelioApocrifo from './evangelio.apocrifo.js';
-import {formatearVersiculo} from './formatear.versiculo.js';
-
-
-const {
-    MONGO_URI_PROD,
-    MONGO_URI,
-    MONGO_USER,
-    MONGO_PASS,
-    MONGO_DB_NAME,
-    MONGO_AUTH_SOURCE,
-} = process.env;
-
-
-if (!MONGO_URI || !MONGO_USER || !MONGO_PASS || !MONGO_DB_NAME || !MONGO_AUTH_SOURCE) {
-    throw new Error("❌ Variables de entorno no definidas correctamente");
-}
+import evangelioCanonico from './evangelio.canonico';
+import evangelioApocrifo from './evangelio.apocrifo';
+import {formatearVersiculo} from './formatear.versiculo';
+import { mongoConfig } from './mongo.config';
+import 'dotenv/config';
 
 const todosLosVersiculos = [...evangelioCanonico, ...evangelioApocrifo];
 
@@ -30,12 +16,9 @@ const versiculoSchema = new mongoose.Schema({
 
 const Versiculo = mongoose.model("Versiculo", versiculoSchema);
 
-mongoose.connect(MONGO_URI, {
-    user: MONGO_USER,
-    pass: MONGO_PASS,
-    dbName: MONGO_DB_NAME,
-    authSource: MONGO_AUTH_SOURCE,
-})
+const { uri} = mongoConfig();
+
+mongoose.connect(uri)
     .then(async () => {
         console.log("📡 Conectado a la base de datos de San Pedro");
         const versiculosFormateados = todosLosVersiculos.map(literal => formatearVersiculo(literal));
