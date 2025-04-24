@@ -1,5 +1,5 @@
 import express from "express";
-import Versiculo from "../models/versiculo";
+import Versiculo from "@models/versiculo";
 
 const router = express.Router();
 

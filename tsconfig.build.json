@@ -1,14 +1,11 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "target": "ES2022",
+    "outDir": "dist",
+    "rootDir": "src",
     "module": "ESNext",
     "moduleResolution": "Node",
-    "outDir": "dist",
-    "rootDir": ".",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
       "@routes/*": ["src/routes/*"],
@@ -16,5 +13,5 @@
     }
   },
   "include": ["src/**/*"],
-  "exclude": ["dist"]
+  "exclude": ["src/test", "**/*.test.ts", "**/*.spec.ts", "vitest.config.ts"]
 }

@@ -1,10 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors            from "cors";
-import versiculoRoutes from './routes/versiculos';
-if (process.env.NODE_ENV !== 'production') {
-    const dotenv = import 'dotenv/config';
-}
+import versiculoRoutes from '@routes/versiculos';
+
+
 const app = express();
 app.use(cors());
 app.use(express.json());
