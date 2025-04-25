@@ -22,29 +22,30 @@
   "type": "module",
   "main": "server.ts",
   "scripts": {
-    "build": "tsc",
-    "dev": "npx tsx server.ts",
-    "populate": "node index.js",
+    "build": "tsup",
+    "test": "vitest --config vitest.config.ts",
+    "dev": "tsx src/server.ts",
+    "populate": "tsx src/utils/populate.ts",
     "start": "node dist/server.js",
-    "test": "vitest run",
     "test:ui": "vitest --ui"
   },
   "dependencies": {
     "cors": "2.8.5",
-    "dotenv": "16.5.0",
+    "dotenv": "^16.5.0",
     "express": "5.1.0",
     "mongoose": "8.13.2"
   },
   "devDependencies": {
     "@types/cors": "2.8.17",
     "@types/express": "5.0.1",
-    "@types/node": "22.14.1",
+    "@types/node": "^22.14.1",
     "@types/supertest": "6.0.3",
-    "@vitest/ui": "3.1.2",
-    "supertest": "7.1.0",
-    "tsx": "4.19.3",
+    "@vitest/ui": "^3.1.2",
+    "supertest": "^7.1.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
     "typescript": "5.8.3",
-    "vitest": "3.1.2"
+    "vitest": "^3.1.2"
   },
   "engines": {
     "node": ">=22.0.0"
