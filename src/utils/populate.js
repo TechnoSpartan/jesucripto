@@ -1,8 +1,9 @@
 import 'dotenv/config';
 import mongoose from 'mongoose';
-import evangelioCanonico from './src/evangelio.canonico.js';
-import evangelioApocrifo from './src/evangelio.apocrifo.js';
-import {formatearVersiculo} from './src/formatear.versiculo.ts';
+import evangelioCanonico from './evangelio.canonico.js';
+import evangelioApocrifo from './evangelio.apocrifo.js';
+import {formatearVersiculo} from './formatear.versiculo.js';
+import evangelioHereje from './evangelio.hereje.js';
 
 
 const {
@@ -19,7 +20,7 @@ if (!MONGO_URI || !MONGO_USER || !MONGO_PASS || !MONGO_DB_NAME || !MONGO_AUTH_SO
     throw new Error("❌ Variables de entorno no definidas correctamente");
 }
 
-const todosLosVersiculos = [...evangelioCanonico, ...evangelioApocrifo];
+const todosLosVersiculos = [...evangelioCanonico, ...evangelioApocrifo, ...evangelioHereje];
 
 const versiculoSchema = new mongoose.Schema({
     texto: String,
