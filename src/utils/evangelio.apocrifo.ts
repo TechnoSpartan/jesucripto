@@ -1,0 +1,26 @@
+export default [
+    "En TypeScript 3:16 se dice: 'Y el tipo se hizo carne, y habitó entre interfaces'.",
+    "Libro de React: 'Y el Padre retornó un `div` vacío, porque aún no era su hora'.",
+    "Epístola según Vite: 'La luz compila más rápido que las tinieblas del Webpack'.",
+    "ArameoScript 12:34: 'Bendito el que hereda sin romper nada'.",
+    "Evangelio de Node 8:12: 'Donde hay `callback`, habrá sufrimiento'.",
+    "El libro perdido de Vue 3: 'No montarás dos componentes sobre la misma raíz, porque es confusión'."
+    "Libro de Angular 4:12 — 'Y el profeta se perdió entre los decoradores, y lloró en `ngOnInit`'.",
+    "Reactos 5:9 — 'No hay mayor amor que dar el `state` por tus componentes'.",
+    "Sagrada Epístola según Vue: 'Maldito el que reacciona sin observar'.",
+    "CoffeScript 0:0 — 'En el principio era bonito, pero nadie entendía qué hacía'.",
+    "Epístola de Babel 7:1 — 'Compilarás siete veces y aún así te maldecirá el runtime'.",
+    "Node 10:6 — 'Y el servidor cayó por tercera vez, como estaba escrito'.",
+    "Apocalipsis de Express — 'Y vendrán middlewares encadenados y se hará el llanto en los logs'.",
+    "Libros Perdidos de Svelte 3:14 — 'Y se deshizo todo al cambiar una sola propiedad'.",
+    "Libro de Tailwind 2:20 — 'Y el devorador de clases utility cubrió la tierra con `px-4 py-2 text-gray-700 font-bold bg-indigo-500 hover:bg-indigo-700`, y no se entendió el HTML jamás.'",
+    "Epístola según Redux 6:13 — 'Y se dividieron los reducers, y el pueblo se perdió en un mar de actions sin propósito.'",
+    "Reactos 7:7 — 'No llames a `setState` en el render, hijo mío, pues invocarás el bucle eterno del tormento.'",
+    "Angular 9:23 — 'Y el `ChangeDetectorRef` miró al componente, y el componente se petrificó.'",
+    "Versículo perdido de Next 10:4 — 'Bienaventurados los que hacen SSR, porque ellos verán errores solo en producción.'",
+    "Códice de Webpack 4:44 — 'Y recompiló por décima vez sin cambiar nada, porque así son los designios del Señor del Bundle.'",
+    "Libro de Astro 1:1 — 'Al principio era el HTML, y luego vino Astro, y el HTML se volvió sospechosamente inteligente.'",
+    "Manuscrito de NPM 5:12 — 'Y clamaron al cielo: ¡Basta de dependencias! Pero vino un `postinstall` y añadió siete más.'",
+    "Proverbios de Jest 3:16 — 'No tientes al `mock`, porque lo que burles hoy será tu fallo mañana.'",
+    "Génesis según Vanilla JS 1:1 — 'En el principio no había librerías, y el desarrollador vio que era demasiado trabajo.'"
+]

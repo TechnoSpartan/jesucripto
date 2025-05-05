@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors            from "cors";
 import versiculoRoutes from '@routes/versiculos';
+import { mongoConfig } from './utils/mongo.config';
 
 
 const app = express();
@@ -10,25 +11,9 @@ app.use(express.json());
 
 app.use("/api", versiculoRoutes);
 
-const {
-    MONGO_URI_PROD,
-    MONGO_URI,
-    MONGO_USER,
-    MONGO_PASS,
-    MONGO_DB_NAME,
-    MONGO_AUTH_SOURCE,
-} = process.env;
+const { uri } = mongoConfig();
 
-
-if (!MONGO_URI || !MONGO_USER || !MONGO_PASS || !MONGO_DB_NAME || !MONGO_AUTH_SOURCE) {
-    throw new Error("❌ Variables de entorno no definidas correctamente");
-}
-
-mongoose.connect(MONGO_URI, {
-    user: MONGO_USER,
-    pass: MONGO_PASS,
-    dbName: MONGO_DB_NAME,
-    authSource: MONGO_AUTH_SOURCE,
+mongoose.connect(uri, {
 })
     .then(() => {
         console.log("✅ Conectado a la base de datos celestial");
