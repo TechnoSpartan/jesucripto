@@ -14,15 +14,15 @@ interface MongoConfig {
 export const mongoConfig = (): MongoConfig => {
 
     const {
-              MONGO_URI_POPULATE
+              MONGO_URI_PROD
     } = process.env;
 
 
-    if (!MONGO_URI_POPULATE) {
+    if (!MONGO_URI_PROD) {
         throw new Error("❌ Variables de entorno no definidas correctamente");
     }
 
     return {
-        uri: MONGO_URI_POPULATE
+        uri: MONGO_URI_PROD
     };
 }
