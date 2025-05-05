@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors            from "cors";
 import versiculoRoutes from '@routes/versiculos.routes';
-import indexGeneralRoutes from '@routes/index_geneneral.routes';
+import indexGeneralRoutes from '@routes/index_general.routes';
 import { mongoConfig }    from '@utils/mongo.config';
 
 
