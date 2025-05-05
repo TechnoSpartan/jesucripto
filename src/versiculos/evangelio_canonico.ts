@@ -98,7 +98,7 @@ export default [
         "fecha": "2024-12-22"
     },
     {
-        "texto": "Jesucripto no hace `console.log`, Él revela.",
+        "texto": "Jesucripto no hace 'console.log', Él revela.",
         "libro": "Evangelio según Jesucripto",
         "capitulo": 1,
         "versiculo": 73,
