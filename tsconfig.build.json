@@ -9,7 +9,11 @@
     "baseUrl": ".",
     "paths": {
       "@routes/*": ["src/routes/*"],
-      "@models/*": ["src/models/*"]
+      "@models/*": ["src/models/*"],
+      "@versiculos/*": ["src/versiculos/*"],
+      "@types/*": ["src/types/*"],
+      "@controller/*": ["src/controller/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["src/**/*"],

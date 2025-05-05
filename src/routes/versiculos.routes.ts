@@ -1,7 +1,8 @@
-import express                                         from "express";
+import type { Router } from 'express';
+import express from "express";
 import { versiculoAllController, versiculoController } from '@controller/versiculo.controller';
 
-const router = express.Router();
+const router: Router = express.Router();
 
 // GET /api/versiculo - Versículo aleatorio
 router.get( '/versiculo',
