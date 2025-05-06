@@ -48,7 +48,9 @@ const Versiculo = mongoose.model("Versiculo", versiculoSchema);
 try {
         const { uri} = mongoConfig();
 
-        await mongoose.connect(uri);
+        await mongoose.connect(uri, {
+            dbName: 'jesucriptoDB',
+        });
         console.log("📡 Conectado a la base de datos de San Pedro");
 
         console.log("🧼 Borrando todos los versículos existentes...");
